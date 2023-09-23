@@ -1,12 +1,11 @@
 import React from 'react';
-import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardTitle, MDBCardText, MDBCardBody, MDBCardImage, MDBBtn } from 'mdb-react-ui-kit';
 import './style.css'
 import ShoppingList from '../Products/ListProduct';
 import Mybutton from '../button/Mybutton';
-
+import Avatar from '../../assets/download.jpg'
 const user = {
     name: 'Hedy Lamarr',
-    imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
+    imageUrl: Avatar,
     imageSize: 90,
 };
 
