@@ -1,9 +1,9 @@
 import React from 'react';
 import './style.css'
 const Mybutton = (props) => {
-    const {onclick} = props ; 
+    const {onclick,label = 'Nhấn nút'} = props ; 
     return (
-        <button onClick={onclick} className="learn-more"> Nhân nút
+        <button onClick={onclick} className="learn-more"> {label}
         </button>
     );
 };

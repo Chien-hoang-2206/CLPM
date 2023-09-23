@@ -1,6 +1,8 @@
 import React from 'react';
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardTitle, MDBCardText, MDBCardBody, MDBCardImage, MDBBtn } from 'mdb-react-ui-kit';
 import './style.css'
+import ShoppingList from '../Products/ListProduct';
+import Mybutton from '../button/Mybutton';
 
 const user = {
     name: 'Hedy Lamarr',
@@ -9,8 +11,7 @@ const user = {
 };
 
 
-export default function Profile({ islogin }) {
-    
+export default function Profile({ islogin , onLogout }) {
     return (
         <div>
             <h1>{user.name}</h1>
@@ -23,6 +24,10 @@ export default function Profile({ islogin }) {
                     height: user.imageSize
                 }}
             />
+            <ShoppingList />
+            {islogin === true ? (<>
+                <Mybutton onclick={onLogout} label='Đăng xuất' />
+            </>) : (<></>)}
             
         </div>
     );
