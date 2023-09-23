@@ -1,9 +1,9 @@
 import './App.css';
+import Home from './components/Home/Home';
+import User from './components/User/User';
 import DemoIcon from './components/icon/DemoIcon';
-import Profile from './components/profile/Profile';
 import { useState } from 'react';
-import LoginForm from './components/LoginForm/LoginForm';
-import { Requirements } from 'cs-erp-theme'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   const [islogin, setLogin] = useState(false);
@@ -20,9 +20,16 @@ function App() {
   ));
 
   return (
-    <div className="App">
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="user/:id" element={<User />} />
+          <Route path="*" element={<p>Sorry, nothing here</p>} />
+
+          {/* <div className="App">
       <h1> Welcome  to My app</h1>
-      <Requirements/>
+
       <div style={{ display: 'flex', justifyContent: 'center', padding: 10 , minHeight: 150}}>
         <div className='container' >
           {islogin ? (<Profile islogin={islogin} onLogout={(e) => setLogin(false) }/>) : (<LoginForm login={islogin} onchangeLogin={(e) => setLogin(e)} />)}
@@ -45,15 +52,11 @@ function App() {
         </div>
       </div>
 
+    </div> */}
+        </Routes>
+      </BrowserRouter>
+    </>
 
-
-      {/* <Loader /> */}
-      {/* <DemoIcon />
-        <DemoIcon />
-        <DemoIcon />
-        <DemoIcon /> */}
-
-    </div>
   );
 }
 
