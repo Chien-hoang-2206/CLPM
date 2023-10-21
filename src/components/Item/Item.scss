@@ -1,0 +1,45 @@
+.itemContainer {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+    img {
+        height: 70px;
+        width: 70px;
+        object-fit: contains;
+        margin-right: 10px;
+    }
+
+    .contentItem {
+        width: 100%;
+
+        .btnAddPrice {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .priceAndStock {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                .textPrice {
+                        color: #f0564a;
+                    }
+                .textStockout {
+                    color: #eb8832;
+                }
+            }
+
+         
+
+            button {
+                color: #fff;
+                background-color: #256b8b;
+                border-radius: 4px;
+                font-size: 12px;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+}

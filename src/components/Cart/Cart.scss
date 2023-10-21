@@ -1,0 +1,33 @@
+.checkBox {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2px;
+}
+.filter {
+    display: flex;
+    flex-direction: column;
+}
+.inputSearch {
+    border-radius: 4px;
+    border: 1px solid #ebebeb;
+    padding: 5px 10px;
+    width: 60%;
+}
+
+.listProductsContainer {
+    margin: 25px 0px 10px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .phonePart{
+        margin-bottom: 20px;
+        .text{
+            font-style: italic;
+            font-size: 20px;
+        }
+    }
+}
+

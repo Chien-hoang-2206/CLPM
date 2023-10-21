@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css'
+import './ProfileStyle.css'
 import ShoppingList from '../Products/ListProduct';
 import Mybutton from '../button/Mybutton';
 import Avatar from '../../assets/download.jpg'
